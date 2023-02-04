@@ -34,10 +34,11 @@ client.on('messageCreate', async function(message){
             frequency_penalty: 0.5,
             presence_penalty: 0.0,
         });
+        
         console.log(response.data.choices[0].text)
         message.reply(response.data.choices[0].text)
     } catch (error) {
-        
+
         console.log(error)
     }
 })
